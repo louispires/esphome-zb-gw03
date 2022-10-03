@@ -28,13 +28,13 @@ external_components:
   - source: github://oxan/esphome-stream-server
   - source: github://syssi/esphome-zeroconf@main
 
-ethernet:
-  type: LAN8720
-  mdc_pin: GPIO23
-  mdio_pin: GPIO18
-  clk_mode: GPIO17_OUT
-  phy_addr: 1
-  power_pin: GPIO16
+#ethernet:
+#  type: LAN8720
+#  mdc_pin: GPIO23
+#  mdio_pin: GPIO18
+#  clk_mode: GPIO17_OUT
+#  phy_addr: 1
+#  power_pin: GPIO16
 
 api:
 ota:
