@@ -16,7 +16,7 @@ substitutions:
 
 esphome:
   name: ${name}
-  platform: ESP32
+#  platform: ESP32
   board: esp-wrover-kit
   on_boot:
     priority: 600
