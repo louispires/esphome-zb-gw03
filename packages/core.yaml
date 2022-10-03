@@ -16,7 +16,6 @@ substitutions:
 
 esphome:
   name: ${name}
-  board: esp-wrover-kit
   on_boot:
     priority: 600
     then:
