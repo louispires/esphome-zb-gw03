@@ -12,11 +12,10 @@
 # GPIO33 I2C SDA 1
 
 substitutions:
-  name: zb-gw03
+  name: zb-gw03-LP
 
 esphome:
   name: ${name}
-#  platform: ESP32
   board: esp-wrover-kit
   on_boot:
     priority: 600
