@@ -12,31 +12,42 @@
 # GPIO33 I2C SDA 1
 
 substitutions:
-  name: zb-gw03-LP
+  name: zb-gw03
 
 esphome:
   name: ${name}
+  comment: ${device_description}
+  project:
+    name: "syssi.esphome-zb-gw03"
+    version: 1.0.0
   on_boot:
     priority: 600
     then:
       - switch.turn_off: download_mode
       - switch.turn_on: zigbee_reset
 
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: esp-idf
+
 external_components:
   - source: github://oxan/esphome-stream-server
-  - source: github://syssi/esphome-zeroconf@main
 
-#ethernet:
-#  type: LAN8720
-#  mdc_pin: GPIO23
-#  mdio_pin: GPIO18
-#  clk_mode: GPIO17_OUT
-#  phy_addr: 1
-#  power_pin: GPIO16
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 1
+  power_pin: GPIO16
+
+ota:
+
+logger:
+  level: DEBUG
 
 api:
-ota:
-logger:
 
 uart:
   id: uart_zigbee
