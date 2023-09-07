@@ -43,6 +43,7 @@ external_components:
 #  power_pin: GPIO16
 
 ota:
+  password: "ota_password"
 
 logger:
   level: DEBUG
