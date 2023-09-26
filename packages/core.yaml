@@ -21,8 +21,6 @@ esphome:
     name: "syssi.esphome-zb-gw03"
     version: 1.0.0
   on_boot:
-    - lambda: |-
-      id(my_ota).set_auth_password("ota_password");
     priority: 600
     then:
       - switch.turn_off: download_mode
@@ -47,9 +45,6 @@ external_components:
 #  clk_mode: GPIO17_OUT
 #  phy_addr: 1
 #  power_pin: GPIO16
-
-ota:
-  password: "ota_password"
 
 logger:
   level: DEBUG
