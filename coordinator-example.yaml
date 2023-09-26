@@ -4,7 +4,7 @@ substitutions:
 
 packages:
   zb-gw03:
-    url: https://github.com/louispires/esphome-zb-gw03/packages
+    url: https://github.com/louispires/esphome-zb-gw03
     ref: main
     files: [core.yaml, packages/status_led.yaml, packages/i2c.yaml, packages/button_zigbee_reset.yaml, packages/mdns.yaml]
     refresh: 0s
