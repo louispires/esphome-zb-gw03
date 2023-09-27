@@ -21,12 +21,12 @@ esphome:
     name: "syssi.esphome-zb-gw03"
     version: 1.0.0
   on_boot:
-    - lambda: |-
-        id(my_ota).set_auth_password("New password");
+    priority: 600
+    then:
+      - switch.turn_off: download_mode
+      - switch.turn_on: zigbee_reset
 
 ota:
-  password: "Old password"
-  id: my_ota
 
 esp32:
   board: esp-wrover-kit
