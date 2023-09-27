@@ -27,6 +27,7 @@ esphome:
       - switch.turn_on: zigbee_reset
 
 ota:
+  password: "tvl6gVgfRTkxSRpGEJeBtsjU99E+SdXGyIN3I3wplx8="
 
 esp32:
   board: esp-wrover-kit
